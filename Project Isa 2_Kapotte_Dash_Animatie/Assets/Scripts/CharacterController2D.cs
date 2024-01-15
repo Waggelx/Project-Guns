@@ -63,7 +63,7 @@ public class CharacterController2D : MonoBehaviour
             }
         }
 
-        // Dash
+        //Dash============================================================================================================================
         if (Input.GetKeyDown(KeyCode.Space))
         {
             if (!isAccelerating)
@@ -101,15 +101,12 @@ public class CharacterController2D : MonoBehaviour
         accelerationTimer = accelerationDuration;
         accelerationDirection = movement.normalized;
         speed = baseSpeed * accelerationMultiplier;
-
-        //animator.SetBool("IsAccelerating", true);
     }
 
     void StopAcceleration()
     {
         isAccelerating = false;
         speed = baseSpeed;
-
-        //animator.SetBool(IsAccelerating, false);
+        
     }
 }
